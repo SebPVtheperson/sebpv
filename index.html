@@ -47,19 +47,18 @@
   "Together, we'll get this done"
         ];
 
-        let index = 0;
-        const dynamicText = document.getElementById('dynamic-text');
+    let index = 0;
+    const dynamicTextElement = document.getElementById('dynamic-text');
 
-        function updateSubheading() {
-            dynamicText = subheadings[index];
-            document.getElementById('dynamic-text').textContent = dynamicText;
-            index = (index + 1) % subheadings.length;
-        }
+    function updateSubheading() {
+        dynamicTextElement.textContent = subheadings[index];
+        index = (index + 1) % subheadings.length;
+    }
 
-        // Start immediately
-        updateSubheadings();
-        // Change every 3 seconds
-        setInterval(updateSubheading, 3000);
+    // Start immediately
+    updateSubheading();
+    // Change every 3 seconds
+    setInterval(updateSubheading, 3000);
     </script>
 </body>
 </html>
