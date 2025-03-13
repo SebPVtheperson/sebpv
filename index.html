@@ -2,24 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SebPV.Com</title>
+    <title>SebPV</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 30px; }
-        h1 { font-size: 36px; margin: 0; }
-        #subtitle { font-size: 14px; color: gray; margin-bottom: 20px; }
-        h2 { font-size: 20px; margin: 20px 0; font-weight: normal; }
-        a { font-size: 18px; }
+        body {
+            background-color: #008080;
+            font-family: Tahoma, Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .window {
+            width: 300px;
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            background-color: #c0c0c0;
+        }
+
+        .title-bar {
+            background-color: #000080;
+            color: white;
+            padding: 4px;
+            font-weight: bold;
+        }
+
+        .window-content {
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 6px 12px;
+            background-color: #c0c0c0;
+            border: 2px outset #fff;
+            cursor: pointer;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .button:active {
+            border-style: inset;
+        }
     </style>
 </head>
 <body>
-    <h1>SebPV</h1>
-    <div id="subtitle">...</div>
-    
-    <h2 id="dynamic-text"></h2>    
-  </a>
-</div>
-
-    <a href="https://calendly.com/sebastianpi/30min?month=2025-03" target="_blank">Call me</a>
-
+    <div class="window">
+        <div class="title-bar">SebPV</div>
+        <div class="window-content">
+            Call me<br>
+            <a href="https://calendly.com/sebastianpi/30min?month=2025-03" class="button">OK</a>
+        </div>
+    </div>
 </body>
 </html>
