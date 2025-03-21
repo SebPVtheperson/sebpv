@@ -26,6 +26,8 @@
             color: white;
             padding: 4px;
             font-weight: bold;
+            display: flex;
+            justify-content: space-between;
         }
 
         .window-content {
@@ -52,15 +54,33 @@
         .button:active {
             border-style: inset;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <div class="window">
         <div class="title-bar">SebPV</div>
         <div class="window-content">
-            <p>Call me</p>
-            <a href="https://calendly.com/sebpv/30min?month=2025-03" class="button">OK</a>
+            <p>Call me.</p>
+            <button class="button" onclick="showIframe()">OK</button>
+            <div id="iframe-container" class="hidden">
+                <iframe 
+                    id="calendly-iframe"
+                    src="https://calendly.com/sebpv/30min?month=2025-03"
+                    width="100%" height="400px" 
+                    style="border: none;">
+                </iframe>
+            </div>
         </div>
     </div>
+
+    <script>
+        function showIframe() {
+            document.getElementById('iframe-container').classList.remove('hidden');
+        }
+    </script>
 </body>
 </html>
